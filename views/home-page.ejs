@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <main>
+<div class="main">
+<% result.forEach(element=>{ %>
+   <h2>NAME: <%= element.name %> </h2>
+   <img src="<%=element.image=>" >  
+  <p>LEVEL:  <%=element.level=></p>
+  <!-- <a href="../views/fav-page.ejs">add-to-favorite</a> -->
+
+
+  <form action="/favorie" method="POST">
+<input hidden type="text" name="name" value="<%= element.name %>" >
+<input hidden type="text" name="image" value="<%=element.image=>" >
+<input hidden type="text" name="level" value="<%=element.level=>" >
+<button type="submit">add-to-favorite </button>
+
+
+</form>
+
+<%})%>
+
+</div>
+
+
+    </main>
+    
+</body>
+</html>

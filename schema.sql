@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS theDig
+
+CREATE TABLE theDig(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(500),
+    image VARCHAR(500),
+    level VARCHAR(500),
+)
